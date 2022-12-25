@@ -543,6 +543,10 @@ a {
     height: 28px;
     width: 28px;
     border-radius: 3px;
+    background-color: #f9f9f9;
+}
+.footer .social-link + .social-link {
+    margin-left: 16px;
 }
 .footer .social-link:hover {
     background-color: #ebebeb;
