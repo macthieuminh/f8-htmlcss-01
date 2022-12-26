@@ -14,21 +14,23 @@
         <link rel="stylesheet" href="assets/css/styles.css" />
         <title>F8 Project 01</title>
     </head>
-    <body>
+    <body id="home">
         <main>
             <!-- Navbar -->
             <header class="fixed-header">
                 <div class="content">
                     <nav class="navbar">
                         <!-- Logo -->
-                        <img src="assets/img/Logo.svg" alt="Logo-Besnik" />
+                        <a href="#!">
+                            <img src="assets/img/Logo.svg" alt="Logo-Besnik" />
+                        </a>
                         <!-- Navigation -->
                         <ul>
-                            <li><a href="#!">Home</a></li>
-                            <li><a href="#!">Features</a></li>
-                            <li><a href="#!">Services</a></li>
-                            <li><a href="#!">Resources</a></li>
-                            <li><a href="#!">Contact</a></li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#featured">Features</a></li>
+                            <li><a href="#resources">Resources</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                         <div class="actions">
                             <a href="#!" class="action-link">Sign in</a>
@@ -61,6 +63,7 @@
                     </div>
                 </div>
             </div>
+            <div id="services"></div>
             <div class="clients">
                 <div class="content">
                     <div class="row">
@@ -159,7 +162,7 @@
                 </div>
             </div>
             <!-- Featured -->
-            <div class="featured">
+            <div id="featured" class="featured">
                 <div class="content">
                     <header>
                         <h2 class="sub-title">Featured Properties</h2>
@@ -290,7 +293,7 @@
                 </div>
             </div>
             <!-- Stats -->
-            <div class="stats">
+            <div id="resources" class="stats">
                 <div class="content">
                     <div class="row">
                         <div class="img-block">
@@ -520,7 +523,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row row-bottom">
+                    <div id="contact" class="row row-bottom">
                         <img
                             src="assets/img/Logo.svg"
                             alt="Besnik."
