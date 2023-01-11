@@ -4,16 +4,32 @@
 :root {
     --primary-color: #0f1b4c;
 }
-html,
-body {
-    scroll-behavior: smooth;
-}
 html {
     font-size: 62.5%;
 }
 body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
+}
+html,
+body {
+    overflow: overlay;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.2);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
 }
 /* Common */
 a {
