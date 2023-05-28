@@ -4,14 +4,17 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Embed CSS -->
         <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+        <!-- Embed Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
             rel="stylesheet" />
         <link rel="stylesheet" href="assets/fonts/stylesheet.css" />
-        <link rel="stylesheet" href="assets/css/styles.css" />
         <link
             rel="apple-touch-icon"
             sizes="57x57"
@@ -77,27 +80,67 @@
         <title>F8 Project 01</title>
     </head>
     <body>
-        <!-- Navbar -->
+        <!-- PC Header -->
         <header class="fixed-header">
             <div class="content">
                 <nav class="navbar">
+                    <!-- Tablet / Mobile Menu -->
+                    <label for="menu-checkbox" class="toggle-menu">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                        </svg>
+                    </label>
                     <!-- Logo -->
                     <a href="#">
-                        <img src="assets/img/Logo.svg" alt="Logo-Besnik" />
+                        <img
+                            class="logo"
+                            src="assets/img/Logo.svg"
+                            alt="Logo-Besnik" />
                     </a>
                     <!-- Navigation -->
-                    <ul>
+                    <ul class="pc-nav">
                         <li><a href="#">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#featured">Features</a></li>
                         <li><a href="#resources">Resources</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li class="show-on-mobile separate">
+                            <a href="#!">Sign in</a>
+                        </li>
+                        <li class="show-on-mobile"><a href="#!">Sign up</a></li>
                     </ul>
                     <div class="actions">
                         <a href="#!" class="action-link">Sign in</a>
                         <a href="#!" class="btn action-btn">Sign up</a>
                     </div>
                 </nav>
+            </div>
+        </header>
+        <!-- Tablet / Mobile Header -->
+        <header class="mobile-header">
+            <input
+                type="checkbox"
+                name=""
+                id="menu-checkbox"
+                class="menu-checkbox"
+                hidden />
+            <!-- Overlay -->
+            <label for="menu-checkbox" class="menu-overlay"></label>
+            <!-- Menu Content -->
+            <div class="menu-drawer">
+                <a href="#">
+                    <img src="assets/img/Logo.svg" alt="Logo-Besnik" />
+                </a>
+                <ul class="mobile-nav"></ul>
+                <script>
+                    const pcNav = document.querySelector(".pc-nav");
+                    const mobileNav = document.querySelector(".mobile-nav");
+                    mobileNav.innerHTML = pcNav.innerHTML;
+                </script>
             </div>
         </header>
         <main>
@@ -586,7 +629,8 @@
                 <div id="contact" class="row row-bottom">
                     <img src="assets/img/Logo.svg" alt="Besnik." class="logo" />
                     <p class="copy-right">
-                        Copyright 2020.com, All rights reserved.
+                        “Live as if you were to die tomorrow. Learn as if you
+                        were to live forever.”
                     </p>
                 </div>
             </div>
